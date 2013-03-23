@@ -7,7 +7,7 @@ ADMINS = (
     ('Thom Neale', 'tneale@sunlightfoundation.com'),
     ('Paul Tagliamonte', 'paultag@sunlightfoundation.com'),
 )
-ALLOWED_HOSTS = ['.openstates.org']
+ALLOWED_HOSTS = ['.openstates.org', '127.0.0.1']
 
 MANAGERS = ADMINS
 
