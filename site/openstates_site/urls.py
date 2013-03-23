@@ -1,46 +1,39 @@
-from django.conf.urls.defaults import patterns, include
+from django.conf.urls import patterns, include
 from django.conf import settings
+from django.views.generic import TemplateView
 
 from django.contrib import admin
 admin.autodiscover()
 
+template_view = TemplateView.as_view
+
 urlpatterns = patterns('',
 
     # flat pages
-    (r'^about/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/about.html'}),
-    (r'^methodology/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/methodology.html'}),
-    (r'^contributing/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/contributing.html'}),
-    (r'^thanks/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/thanks.html'}),
-    (r'^contact/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/contact.html'}),
-    (r'^categorization/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/categorization.html'}),
-    (r'^csv_downloads/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/csv_downloads.html'}),
-    (r'^reportcard/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/reportcard.html'}),
-    (r'^map_svg/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/openstatesmap.svg'}),
+    (r'^about/$', template_view(template_name='flat/about.html')),
+    (r'^methodology/$', template_view(template_name='flat/methodology.html')),
+    (r'^contributing/$',
+        template_view(template_name='flat/contributing.html')),
+    (r'^thanks/$', template_view(template_name='flat/thanks.html')),
+    (r'^contact/$', template_view(template_name='flat/contact.html')),
+    (r'^categorization/$',
+        template_view(template_name='flat/categorization.html')),
+    (r'^csv_downloads/$',
+         template_view(template_name='flat/csv_downloads.html')),
+    (r'^reportcard/$', template_view(template_name='flat/reportcard.html')),
 
     # api docs
-    (r'^api/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/api/api.html'}),
-    (r'^api/metadata/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/api/metadata.html'}),
-    (r'^api/bills/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/api/bills.html'}),
-    (r'^api/committees/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/api/committees.html'}),
-    (r'^api/legislators/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/api/legislators.html'}),
-    (r'^api/events/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/api/events.html'}),
-    (r'^api/districts/$', 'django.views.generic.simple.direct_to_template',
-     {'template':'flat/api/districts.html'}),
+    (r'^api/$', template_view(template_name='flat/api/api.html')),
+    (r'^api/metadata/$',
+        template_view(template_name='flat/api/metadata.html')),
+    (r'^api/bills/$', template_view(template_name='flat/api/bills.html')),
+    (r'^api/committees/$',
+        template_view(template_name='flat/api/committees.html')),
+    (r'^api/legislators/$',
+        template_view(template_name='flat/api/legislators.html')),
+    (r'^api/events/$', template_view(template_name='flat/api/events.html')),
+    (r'^api/districts/$',
+         template_view(template_name='flat/api/districts.html')),
 
     # locksmith & sunlightauth
     (r'^api/locksmith/', include('locksmith.mongoauth.urls')),
