@@ -24,6 +24,8 @@ urlpatterns = patterns('',
      {'template':'flat/csv_downloads.html'}),
     (r'^reportcard/$', 'django.views.generic.simple.direct_to_template',
      {'template':'flat/reportcard.html'}),
+    (r'^opencivicdata/$', 'django.views.generic.simple.direct_to_template',
+     {'template':'flat/opencivicdata.html'}),
     (r'^map_svg/$', 'django.views.generic.simple.direct_to_template',
      {'template':'flat/openstatesmap.svg'}),
 
