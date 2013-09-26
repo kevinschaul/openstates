@@ -1,4 +1,5 @@
 {% extends "flat/flatpage.html" %}
+{% load staticfiles %}
 {% load markup_tags %}
 
 {% block title %}Open States: Open Civic Data{% endblock %}
@@ -6,21 +7,30 @@
 {% block flatpage %}
 
 <div id="container">
-    <h2>Open Civic Data Project</h2>
+    <img src="{% static "images/opencivicdata_logo.png" %}" style="border:0px" alt="The OpenCivic Data Project" />
     <div class="eightCol colLt" >
-<p>
-Pour-over fixie whatever mustache before they sold out, dreamcatcher tempor pickled. High Life synth banh mi veniam minim. Leggings VHS deserunt, esse aliquip selfies occupy. Commodo esse deep v tattooed food truck before they sold out. Excepteur sunt dolor, nisi Tumblr flexitarian PBR church-key slow-carb mumblecore. Church-key sustainable cillum duis culpa lomo Brooklyn veniam 8-bit. Sapiente in American Apparel, Pinterest laborum Godard dreamcatcher labore.
-</p>
-<p>
-Magna whatever McSweeney's, blog shabby chic hella ennui. Magna assumenda blog +1 swag. VHS asymmetrical cred, kogi wayfarers nulla consectetur beard typewriter locavore Schlitz. Est quinoa flannel sint, pour-over consectetur umami hashtag banjo sriracha dolor tattooed +1 lomo ennui. Plaid single-origin coffee hashtag, consectetur aute literally ad church-key asymmetrical. Officia umami odio, photo booth next level polaroid farm-to-table viral Tumblr irony seitan disrupt hashtag quis. Pariatur beard eu, locavore cillum direct trade consequat irony Truffaut sunt polaroid sapiente synth.
-</p>
-<p>
-Aliquip messenger bag wayfarers, elit vegan pariatur mlkshk umami food truck High Life pug. Disrupt eu Etsy PBR. Photo booth tousled readymade nihil, Shoreditch minim letterpress Wes Anderson YOLO proident. Bicycle rights Marfa meggings, beard sustainable Wes Anderson keffiyeh keytar. Seitan +1 Thundercats mlkshk forage, leggings trust fund nulla Tonx Bushwick do 90's kitsch. Fugiat banh mi dolore delectus tempor. Salvia quis selfies Portland voluptate blog.
-</p>
-<p>
-Whatever organic you probably haven't heard of them jean shorts gastropub. Magna authentic before they sold out, Austin nulla et skateboard mumblecore consequat pour-over aliquip. Excepteur aliquip flexitarian, Carles ennui before they sold out chia. Officia Pinterest chambray whatever chillwave, PBR&B sriracha High Life in pickled bitters master cleanse. Craft beer Etsy mumblecore swag distillery lomo. Nisi Bushwick sunt, Thundercats assumenda gluten-free you probably haven't heard of them master cleanse freegan irony qui adipisicing PBR&B. Aliqua sed eiusmod Pitchfork.
-</p>
-
+        <p>
+The Sunlight Foundation is seeking volunteers to assist in developing a national
+collection of civic data about our cities and towns. This municipal-level
+legislative data will echo that available from our
+<a href="http://openstates.org/" >Open States Project</a>
+for all 50 states. Whether you can write a web scraper, help with data
+management, or contact policy makers on why open data is important, you
+contributions are valued.
+        </p>
+        <p>
+We are committed to creating a free, open and sustainable database of civic
+data, covering municipalities across the U.S. Additionally, we are encouraging
+all local governments, technology vendors and web developers to adopt a set of
+Open Civic Data standards to ensure that data is made available publicly and in
+a machine-readable format.
+        </p>
+        <p>
+This collection of local legislative data is also part of an API, currently in
+beta. Sunlight also welcomes our community partners in this project and
+supporters such as Google.org. Read reading for information on how to get
+involved.
+        </p>
     </div>
     <div class="sidebar threeCol colRt" >
         <div class="module" >
