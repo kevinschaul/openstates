@@ -10,7 +10,7 @@ url = "http://www.leg.state.mn.us/calendarday.aspx?jday=all"
 
 class MNEventScraper(EventScraper):
     jurisdiction = 'mn'
-    _tz = pytz.timezone('US/Eastern')
+    _tz = pytz.timezone('US/Central')
     def lxmlize(self, url):
         page = self.urlopen(url)
         page = lxml.html.fromstring(page)
